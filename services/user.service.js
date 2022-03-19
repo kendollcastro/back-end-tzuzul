@@ -4,9 +4,9 @@ const User = require('../models/user.model');
 const userService = {}
 
 /* Servicio para crear el usuario */
-userService.createUser = async function({email, password}) {
+userService.createUser = async function({name, email, password}) {
     try {
-        const user = new User({email, password: md5(password)});
+        const user = new User({name, email, password: md5(password)});
         const newUser = await user.save();
         return newUser;
     }catch (e) {

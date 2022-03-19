@@ -6,6 +6,10 @@ para ser almacenados en la base de datos: En este modelo vamos a poder almacenar
 y la contraseña del usuario */
 
 const userSchema = new Schema({
+    name: {
+        type: String,
+        require: true
+    },
     email:{
         type: String,
         require: true
